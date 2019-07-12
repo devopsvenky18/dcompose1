@@ -1,12 +1,8 @@
 version: '3'
-
-# same as 
-# docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
-
 services:
-  tomcat:
-    image: devopsvenky18/tomcat-addbook
-    volumes:
-      - .:/tmp
-    ports:
-- '80:8000'
+    tomcat:
+        image: devopsvenky18/tomcat-addbook
+        volumes:
+            - ./tmp:/usr/local/tomcat/webapp/
+        ports:
+            - '80:8080'
