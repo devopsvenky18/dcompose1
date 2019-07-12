@@ -1,0 +1,12 @@
+version: '1'
+service:
+    web:
+        image: nginx
+        ports:
+            - "80"
+        volumes:
+            - /tmp/:/var/www/html
+    app:
+        image: tomcat
+        ports:
+            - "8080"
